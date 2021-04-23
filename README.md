@@ -1,6 +1,2 @@
-# bases-ionic
-Proyecto ejemplo de arranque:
-  - Routing entre tres pantallas independientes.
-  - Componente header compartido.
-  - Listado de items.
-  
+# ionic-components 
+Proyecto ejemplo con diferentes componentes ionic integrados.
