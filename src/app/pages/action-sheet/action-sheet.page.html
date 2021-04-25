@@ -1,2 +1,9 @@
-<app-header title="actions" ></app-header>
-<ion-content></ion-content>
+<app-header title="action sheet" color="secondary" endButtonIcon1="heart-outline" endButtonIcon2="heart"></app-header>
+
+<ion-text color="secondary" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content class="ion-padding">
+    <ion-button (click)="onClick()" expand="block" color="secondary">
+        Show Action-Sheet
+    </ion-button>
+</ion-content>

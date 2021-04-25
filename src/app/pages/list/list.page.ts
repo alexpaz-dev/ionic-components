@@ -16,16 +16,28 @@ export class ListPage implements OnInit {
 
   listItems: Item[] = [
     {
-      icon: 'logo-whatsapp',
-      name: 'Whatsapp',
-      color: 'success',
+      icon: 'star',
+      name: 'Alerts',
+      color: 'medium',
       redirecTo: '/alert',
     },
     {
-      icon: 'logo-playstation',
-      name: 'Playstation',
-      color: 'primary',
+      icon: 'star',
+      name: 'Action Sheets',
+      color: 'medium',
       redirecTo: '/action-sheet',
+    },
+    {
+      icon: 'star',
+      name: 'Avatars',
+      color: 'medium',
+      redirecTo: '/avatar',
+    },
+    {
+      icon: 'star',
+      name: 'Buttons',
+      color: 'medium',
+      redirecTo: '/button',
     },
   ];
 

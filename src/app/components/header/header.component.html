@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" color="primary" text="Go back"></ion-back-button>
+      <ion-back-button defaultHref="/" color="medium" text="Go back"></ion-back-button>
     </ion-buttons>
 
-    <ion-title class="ion-text-capitalize">{{title}}</ion-title>
+    <ion-title class="ion-text-capitalize" [color]="color" >{{title}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="onClickEndButton()">
+        <ion-icon slot="icon-only" [name]=" endButtonClicked ? icon1 : icon2 "></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>

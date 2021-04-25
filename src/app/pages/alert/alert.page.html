@@ -1,2 +1,9 @@
-<app-header title="alerts"></app-header>
-<ion-content></ion-content>
+<app-header title="alert" color="danger" endButtonIcon="alert"></app-header>
+
+<ion-text color="danger" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content>
+    <ion-button (click)="presentAlert()" color="danger" expand="block" class="ion-padding">Show Alert (1)</ion-button>
+    <ion-button (click)="presentAlertMultipleButtons()" color="danger" expand="block" class="ion-padding">Show Alert (2)</ion-button>
+    <ion-button (click)="presentAlertPrompt()" color="danger" expand="block" class="ion-padding">Show Alert (3)</ion-button>
+</ion-content>
