@@ -1,0 +1,59 @@
+<app-header title="Fab" color="dark" endButtonIcon1="add-circle-outline" endButtonIcon2="add-circle">
+</app-header>
+
+<ion-text color="dark" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon name="apps"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button color="primary"><ion-icon name="logo-ionic"></ion-icon></ion-fab-button>
+      <ion-fab-button color="danger"><ion-icon name="logo-angular"></ion-icon></ion-fab-button>
+      <ion-fab-button color="secondary"><ion-icon name="logo-react"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="start">
+      <ion-fab-button color="google"><ion-icon name="logo-google"></ion-icon></ion-fab-button>
+      <ion-fab-button><h2 style="color: red; font-weight: bold; margin: auto;">N</h2></ion-fab-button>
+      <ion-fab-button color="apple"><ion-icon name="logo-apple"></ion-icon></ion-fab-button>
+      <ion-fab-button color="amazon"><ion-icon name="logo-amazon"></ion-icon></ion-fab-button>
+      <ion-fab-button color="facebook"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    
+  </ion-fab>
+
+<!--   <ion-fab vertical="center" horizontal="center" slot="fixed">
+    <ion-fab-button color="warning">
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="end">
+      <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab> -->
+  
+  <ion-list>
+    <ion-item *ngFor="let item of dataList; let i = index">
+      <ion-label>Item {{ i }} </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

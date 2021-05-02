@@ -1,0 +1,39 @@
+<app-header title="checkbox" color="dark" endButtonIcon1="checkbox-outline" endButtonIcon2="checkbox">
+</app-header>
+
+<ion-text color="dark" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content class="ion-padding">
+  <h4> Default Checkbox </h4>
+  <ion-checkbox></ion-checkbox>
+
+  <h4> Disabled Checkbox </h4>
+  <ion-checkbox color="danger" disabled="true"></ion-checkbox>
+
+  <h4> Checked Checkbox </h4>
+  <ion-checkbox checked="true"></ion-checkbox>
+
+  <h4> Checkbox Colors </h4>
+  <ion-checkbox class="ion-margin" color="primary"></ion-checkbox>
+  <ion-checkbox class="ion-margin" color="secondary"></ion-checkbox>
+  <ion-checkbox class="ion-margin" color="tertiary"></ion-checkbox>
+  <ion-checkbox class="ion-margin" color="danger"></ion-checkbox>
+  <ion-checkbox class="ion-margin" color="light"></ion-checkbox>
+
+  <h4> Checkboxes in a List </h4>
+  <ion-list>
+    <ion-item *ngFor="let entry of pizza" (click)="onClick(entry)">
+      <ion-label>{{ entry.val }}</ion-label>
+      <ion-checkbox [color]="entry.color" slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="warning" (click)="showData()" expand="block" fill="clear" shape="round">
+    Show pizza!!
+  </ion-button>
+
+  <ion-text color="primary">
+    <p style="font-size: 12px;"> {{ text }} </p>
+  </ion-text>
+
+</ion-content>

@@ -1,0 +1,35 @@
+<app-header title="datetime" color="dark" endButtonIcon1="calendar-number-outline" endButtonIcon2="calendar-number">
+</app-header>
+
+<ion-text color="dark" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label color="medium">Birth information</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label color="warning">Birth date</ion-label>
+      <ion-item>
+        <ion-datetime [value]="dafaultDate.toISOString()"
+                      display-format="DDDD DD/MM/YYYY"
+                      (ionChange)="dateChanged( $event )"
+                      min="2000-01-01"
+                      max="2050-12-31">
+        </ion-datetime>
+      </ion-item>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="warning">Custom date</ion-label>
+      <ion-item>
+        <ion-datetime [value]="dafaultDate.toISOString()"
+                      [pickerOptions]="customPickerOptions"
+                      [yearValues]="customYearValues">
+        </ion-datetime>
+      </ion-item>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

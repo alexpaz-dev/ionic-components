@@ -4,7 +4,7 @@
       <ion-back-button defaultHref='/' color="medium" text="Go back"></ion-back-button>
     </ion-buttons>
 
-    <ion-title class="ion-text-capitalize" color="primary">avatar</ion-title>
+    <ion-title class="ion-text-capitalize" color="dark">avatar</ion-title>
 
     <ion-buttons slot="end">
       <ion-avatar>
@@ -19,11 +19,11 @@
 
 <ion-content>
 
-  <ion-item-divider color="dark">
-    <ion-label color="danger">Chips</ion-label>
+  <ion-item-divider color="light">
+    <ion-label color="medium">Chips</ion-label>
   </ion-item-divider>
 
-  <ion-chip color="primary" outline="true"
+  <ion-chip color="danger" outline="true"
             *ngFor="let item of [1,1,1]">
     <ion-avatar>
       <ion-img src="/assets/images/avatar.png"></ion-img>
@@ -31,8 +31,8 @@
     <ion-label>Avatar</ion-label>
   </ion-chip>
 
-  <ion-item-divider color="dark">
-    <ion-label color="danger">List</ion-label>
+  <ion-item-divider color="light">
+    <ion-label color="medium">List</ion-label>
   </ion-item-divider>
 
   <ion-list *ngFor="let item of [1,1,1]">
@@ -40,7 +40,7 @@
       <ion-avatar slot="start">
         <ion-img src="/assets/images/avatar.png"></ion-img>
       </ion-avatar>
-      <ion-label color="primary">Item Avatar</ion-label>
+      <ion-label color="warning">Item Avatar</ion-label>
     </ion-item>
   </ion-list>
 
