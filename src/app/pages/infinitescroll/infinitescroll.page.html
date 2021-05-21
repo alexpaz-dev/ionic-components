@@ -1,0 +1,18 @@
+<app-header title="infinite scroll" color="dark" endButtonIcon1="refresh-circle" endButtonIcon2="refresh-circle-outline"></app-header>
+
+<ion-text color="dark" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data; let i = index;">
+      <ion-label>Item list {{ i + 1 }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="25%" [disabled]="false" position="bottom" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="dots" loadingText="Loading more items...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,29 @@
+<app-header title="grid" color="dark" endButtonIcon1="grid" endButtonIcon2="grid-outline"></app-header>
+
+<ion-text color="dark" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content>
+
+  <ion-grid fixed>
+    <ion-row>
+      <!-- Default size of ion grid is 12 -->
+      <ion-col size="12" size-lg="3" size-md="4" size-sm="6"
+                *ngFor="let item of [1,1,1,1,1,1]">
+        <ion-card>
+          <ion-img src="/assets/images/avatar.png"></ion-img>
+        </ion-card>
+
+        <ion-card-header>
+          <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+          <ion-card-title>Awesome Title</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Awesome content
+        </ion-card-content>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

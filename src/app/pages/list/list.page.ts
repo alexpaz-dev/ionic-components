@@ -63,6 +63,24 @@ export class ListPage implements OnInit {
       color: 'medium',
       redirecTo: '/fab',
     },
+    {
+      icon: 'star',
+      name: 'Grid',
+      color: 'medium',
+      redirecTo: '/grid',
+    },
+    {
+      icon: 'star',
+      name: 'Infinite Scroll',
+      color: 'medium',
+      redirecTo: '/inifinitescroll',
+    },
+    {
+      icon: 'star',
+      name: 'Input',
+      color: 'medium',
+      redirecTo: '/input',
+    },
   ];
 
   constructor() { }

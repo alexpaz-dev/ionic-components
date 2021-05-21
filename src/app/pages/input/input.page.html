@@ -1,0 +1,30 @@
+<app-header title="input" color="dark" endButtonIcon1="create" endButtonIcon2="create-outline"></app-header>
+
+<ion-text color="dark" class="ion-padding">{{ description }}</ion-text>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>User information:</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" placeholder="Put your name" [(ngModel)]="name"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">E-Mail:</ion-label>
+      <ion-input required placeholder="Put your email" type="email" name="email" [(ngModel)]="user.email"
+                  pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password:</ion-label>
+      <ion-input required placeholder="Put your password" type="password" name="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-button block color="primary" type="submit" expand="block" [disabled]="loginForm.invalid">
+      Login
+    </ion-button>
+  </form>
+</ion-content>
